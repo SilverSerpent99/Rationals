@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Lf7QTETht91/BCH06VSkIQ9FS34locjA5gSKI1Cn8qiN7xDGvtilMVIZKxvE5Zqbslm8KBdEG+1OLshtzptDtg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Panna\\source\\repos\\rational_class\\rational_class\\rational_class.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Panna\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
