@@ -5,6 +5,7 @@ namespace rational_class
 {
 
     //can i upload from Visual Studio
+    //okay im trying again, failed the first time
     class Factorized //represents a positive whole number using its prime factors.
     {
         Dictionary<ulong, ulong> factors; //key for prime, value for the power.

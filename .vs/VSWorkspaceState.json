@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\rational_class",
+    "\\rational_class\\rational_class"
   ],
+  "SelectedNode": "\\rational_class\\rational_class\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
