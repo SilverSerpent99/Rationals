@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Panna\\source\\repos\\rational_class\\rational_class\\rational_class.csproj": {}
+    "C:\\Users\\Panna\\Source\\Repos\\Rationals\\rational_class\\rational_class\\rational_class.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Panna\\source\\repos\\rational_class\\rational_class\\rational_class.csproj": {
+    "C:\\Users\\Panna\\Source\\Repos\\Rationals\\rational_class\\rational_class\\rational_class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Panna\\source\\repos\\rational_class\\rational_class\\rational_class.csproj",
+        "projectUniqueName": "C:\\Users\\Panna\\Source\\Repos\\Rationals\\rational_class\\rational_class\\rational_class.csproj",
         "projectName": "rational_class",
-        "projectPath": "C:\\Users\\Panna\\source\\repos\\rational_class\\rational_class\\rational_class.csproj",
+        "projectPath": "C:\\Users\\Panna\\Source\\Repos\\Rationals\\rational_class\\rational_class\\rational_class.csproj",
         "packagesPath": "C:\\Users\\Panna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Panna\\source\\repos\\rational_class\\rational_class\\obj\\",
+        "outputPath": "C:\\Users\\Panna\\Source\\Repos\\Rationals\\rational_class\\rational_class\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Panna\\AppData\\Roaming\\NuGet\\NuGet.Config",
