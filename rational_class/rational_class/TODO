@@ -1,7 +1,9 @@
-szedd szét külön file-okba az osztályokat
+
 put useless pieces of code in some cryo-chamber or something
 Jobb kiírás
 Műveletek racionálisokra
 "simplify" function for rationals
 Constructor for rationals using two ulongs and a bool, not two longs
-I STILL NEED TO PUT THESE IN SEPARATE FILES oh god
+
+DONE:
+file separation, my code is readable now!
