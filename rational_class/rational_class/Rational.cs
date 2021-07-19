@@ -11,6 +11,28 @@ namespace rational_class
         Factorized denominator;
         bool isZero;
 
+        public Rational(ulong numerator, ulong denominator, bool pos)
+        {
+            if (denominator == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            if (numerator == 0)
+            {
+                isZero = true;
+                this.numerator = new Factorized(1);
+                this.denominator = new Factorized(1); //I'm afraid if I don't do this, the thing will shit itself later
+            }
+            else
+            {
+                isZero = false;
+                positive = pos;
+                this.numerator = new Factorized(numerator);
+                this.denominator = new Factorized(denominator);
+            }
+            this.Simplify();
+        }
+
         public Rational(long numerator, long denominator)
         {
             if (denominator == 0)
@@ -31,6 +53,7 @@ namespace rational_class
                 this.numerator = new Factorized((ulong)Math.Abs(numerator));
                 this.denominator = new Factorized((ulong)Math.Abs(denominator));
             }
+            this.Simplify();
         }
 
         public void WriteWeirdRational()
@@ -42,6 +65,13 @@ namespace rational_class
             Console.WriteLine("Positive: " + positive);
             //I'll write a better function to write these.
 
+        }
+
+        private void Simplify()
+        {
+            Factorized toDivideBy = Factorized.HCF(numerator,denominator);
+            numerator = Factorized.UnsafeDivide(numerator,toDivideBy);
+            denominator = Factorized.UnsafeDivide(denominator, toDivideBy);
         }
 
     }

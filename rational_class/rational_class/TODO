@@ -2,8 +2,9 @@
 put useless pieces of code in some cryo-chamber or something
 Jobb kiírás
 Műveletek racionálisokra
-"simplify" function for rationals
 Constructor for rationals using two ulongs and a bool, not two longs
 
 DONE:
 file separation, my code is readable now!
+it simplifies now!
+also we can divide factorized numbers. Usually, you shouldn't do that, but we can.
