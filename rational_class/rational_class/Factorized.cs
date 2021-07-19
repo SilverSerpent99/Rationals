@@ -86,6 +86,9 @@ namespace rational_class
                 if (c.factors.ContainsKey(factor.Key))
                 {
                     c.factors[factor.Key] = c.factors[factor.Key] - factor.Value;
+                    if (c.factors[factor.Key] == 0)
+                    { c.factors.Remove(factor.Key); }
+
                 }
                 else
                 {
