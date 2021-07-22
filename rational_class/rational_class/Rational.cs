@@ -48,12 +48,20 @@ namespace rational_class
             else
             {
                 isZero = false;
-                positive = (numerator > 0 && denominator > 0) || (numerator < 0 && denominator < 0);
-                //would this be better with ifs? idk notify me if you have insight on that
+                positive = (numerator > 0 ^ denominator > 0);
                 this.numerator = new Factorized((ulong)Math.Abs(numerator));
                 this.denominator = new Factorized((ulong)Math.Abs(denominator));
             }
             this.Simplify();
+        }
+        private Rational(Factorized numerator, Factorized denominator, bool positive)
+        {
+            isZero = false;
+            this.positive = positive;
+            this.numerator = new Factorized(numerator);
+            this.denominator = new Factorized(denominator);
+            this.Simplify();
+        
         }
 
         public void WriteWeirdRational()
@@ -69,10 +77,20 @@ namespace rational_class
 
         private void Simplify()
         {
-            Factorized toDivideBy = Factorized.HCF(numerator,denominator);
-            numerator = Factorized.UnsafeDivide(numerator,toDivideBy);
+            Factorized toDivideBy = Factorized.HCF(numerator, denominator);
+            numerator = Factorized.UnsafeDivide(numerator, toDivideBy);
             denominator = Factorized.UnsafeDivide(denominator, toDivideBy);
         }
+
+        public static Rational operator *(Rational a, Rational b)
+            {
+            Factorized newNumerator = a.numerator * b.numerator;
+            Factorized newDenominator = a.denominator * b.denominator;
+            Rational c = new Rational(newNumerator, newDenominator, !(a.positive^b.positive));
+            c.Simplify();
+            return c;
+
+            }
 
     }
 
