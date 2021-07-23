@@ -77,20 +77,45 @@ namespace rational_class
 
         private void Simplify()
         {
-            Factorized toDivideBy = Factorized.HCF(numerator, denominator);
-            numerator = Factorized.UnsafeDivide(numerator, toDivideBy);
+            Factorized toDivideBy = Factorized.HCF(numerator, denominator); 
+            numerator = Factorized.UnsafeDivide(numerator, toDivideBy); 
             denominator = Factorized.UnsafeDivide(denominator, toDivideBy);
-        }
+        }//3 traverses
 
         public static Rational operator *(Rational a, Rational b)
             {
-            Factorized newNumerator = a.numerator * b.numerator;
-            Factorized newDenominator = a.denominator * b.denominator;
-            Rational c = new Rational(newNumerator, newDenominator, !(a.positive^b.positive));
-            c.Simplify();
+            Rational c;
+            if (a.isZero || b.isZero)
+            { c = new Rational(0, 1, false); }
+            else
+            {
+                Factorized newNumerator = a.numerator * b.numerator; 
+                Factorized newDenominator = a.denominator * b.denominator;
+                c = new Rational(newNumerator, newDenominator, !(a.positive ^ b.positive));
+                c.Simplify();
+            }
             return c;
 
+            }//5 traverses
+
+        public static Rational operator /(Rational a, Rational b)
+        {
+            Rational c;
+            if(b.isZero)
+            { throw new DivideByZeroException(); }
+            if (a.isZero)
+            { c = new Rational(0, 1, false); }
+            else
+            {
+                Factorized newNumerator = a.numerator * b.denominator;
+                Factorized newDenominator = a.denominator * b.numerator;
+                c = new Rational(newNumerator, newDenominator, !(a.positive ^ b.positive));
+                c.Simplify();
             }
+            return c;
+
+        }//5 traverses
+
 
     }
 
